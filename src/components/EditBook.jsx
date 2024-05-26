@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../CSS/AddStudent.css";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 const EditBook = () => {
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
@@ -14,7 +15,7 @@ const EditBook = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.APP_BASE_URL}/book/book/${id}`)
+      .get(`${REACT_APP_BASE_URL}/book/book/${id}`)
       .then((res) => {
         setName(res.data.name);
         setAuthor(res.data.author);
@@ -31,7 +32,7 @@ const EditBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`${process.env.APP_BASE_URL}/book/book/${id}`, {
+      .put(`${REACT_APP_BASE_URL}/book/book/${id}`, {
         name,
         author,
         imageUrl,

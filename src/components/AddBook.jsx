@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../CSS/AddStudent.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+
+const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 const AddBook = () => {
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
@@ -14,7 +16,7 @@ const AddBook = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${process.env.APP_BASE_URL}/book/add`, {
+      .post(`${REACT_APP_BASE_URL}/book/add`, {
         name,
         author,
         imageUrl,

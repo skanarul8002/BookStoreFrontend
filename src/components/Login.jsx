@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../CSS/Login.css";
 import axios from "axios";
+const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 const Login = ({ setRoleVar }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +13,7 @@ const Login = ({ setRoleVar }) => {
   const handleSubmit = () => {
     //pass data from to login
     axios
-      .post(`${process.env.APP_BASE_URL}/auth/login`, {
+      .post(`${REACT_APP_BASE_URL}/auth/login`, {
         username,
         password,
         role,

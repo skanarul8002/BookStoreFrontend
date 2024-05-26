@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../CSS/AddStudent.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 const AddStudent = () => {
   const [roll, setRoll] = useState("");
   const [username, setUsername] = useState("");
@@ -12,7 +13,7 @@ const AddStudent = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${process.env.APP_BASE_URL}/student/register`, {
+      .post(`${REACT_APP_BASE_URL}/student/register`, {
         roll,
         username,
         password,

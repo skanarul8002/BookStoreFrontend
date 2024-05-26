@@ -11,13 +11,16 @@ import axios from "axios";
 import AddBook from "./components/AddBook";
 import EditBook from "./components/EditBook";
 import DeleteBook from "./components/DeleteBook";
+const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+console.log("Base URL:", REACT_APP_BASE_URL);
+
 function App() {
   const [role, setRole] = useState("");
 
   axios.defaults.withCredentials = true;
   useEffect(() => {
     axios
-      .get(`${process.env.APP_BASE_URL}/auth/verify`)
+      .get(`${REACT_APP_BASE_URL}/auth/verify`)
       .then((res) => {
         if (res.data.login) {
           setRole(res.data.role);

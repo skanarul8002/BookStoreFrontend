@@ -3,11 +3,13 @@ import React, { useEffect, useState } from "react";
 import BookCard from "./BookCard";
 import "../CSS/Book.css";
 
+const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+
 const Books = ({ role }) => {
   const [books, setBooks] = useState([]);
   useEffect(() => {
     axios
-      .get(`${process.env.APP_BASE_URL}/book/books`)
+      .get(`${REACT_APP_BASE_URL}/book/books`)
       .then((res) => {
         setBooks(res.data);
         console.log(res.data);
