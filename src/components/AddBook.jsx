@@ -3,7 +3,7 @@ import "../CSS/AddStudent.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+const REACT_APP_BASE_URL = "https://bookstore-1ljq.onrender.com";
 const AddBook = () => {
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
