@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../CSS/AddStudent.css";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+const REACT_APP_BASE_URL = "https://bookstore-1ljq.onrender.com";
 const EditBook = () => {
   const [name, setName] = useState("");
   const [author, setAuthor] = useState("");
