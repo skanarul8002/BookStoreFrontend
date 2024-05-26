@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../CSS/Dashboard.css";
 import axios from "axios";
-const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
+const REACT_APP_BASE_URL = "https://bookstore-1ljq.onrender.com";
 const Dashboard = () => {
   const [students, setStudents] = useState(0);
   const [admin, setAdmin] = useState(0);
