@@ -12,7 +12,7 @@ import AddBook from "./components/AddBook";
 import EditBook from "./components/EditBook";
 import DeleteBook from "./components/DeleteBook";
 const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
-console.log("Base URL:", REACT_APP_BASE_URL);
+//console.log("Base URL:", REACT_APP_BASE_URL);
 
 function App() {
   const [role, setRole] = useState("");
