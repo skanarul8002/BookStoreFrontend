@@ -8,7 +8,7 @@ const Navbar = ({ role }) => {
     <nav className="navbar">
       <div className="navbar-left">
         <Link to="/" className="navbar-brand">
-          Book Store
+          Book Spot
         </Link>
       </div>
       <div className="navbar-right">
